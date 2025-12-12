@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS测试</title>
+    <style>
+        .test { color: red; }
+    </style>
+</head>
+<body>
+    <h1 class="test">如果这是红色的，内联CSS工作</h1>
+    <div id="result"></div>
+    <script>
+        // 测试外部CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/css/main.css';
+        link.onload = () => document.getElementById('result').innerHTML = '✅ 外部CSS加载成功';
+        link.onerror = () => document.getElementById('result').innerHTML = '❌ 外部CSS加载失败';
+        document.head.appendChild(link);
+    </script>
+</body>
+</html>

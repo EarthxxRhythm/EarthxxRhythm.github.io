@@ -1,0 +1,55 @@
+baseURL = "https://earthxx-rhythm-github-io.vercel.app/"
+title = "我的博客"
+theme = "LoveIt-0.3.0"
+languageCode = "zh-cn"
+hasCJKLanguage = true
+
+# 禁用缓存功能
+enableGitInfo = false
+enableRobotsTXT = false
+
+[params]
+    # 基础信息
+    description = "我的个人博客"
+    [params.author]
+      name = "Earth"
+      link = "https://你的网站或社交媒体链接"
+    
+    # 主题模式
+    defaultTheme = "light"  # light, dark, auto
+    
+    # 功能开关
+    enableLastMod = true
+    enableReadingTime = true
+    
+    # 搜索
+    [params.search]
+        enable = true
+        type = "lunr"
+    
+    # 代码高亮
+    [params.highlight]
+        style = "github"
+        lineNos = true
+
+# 菜单配置
+[menu]
+    [[menu.main]]
+        name = "首页"
+        url = "/"
+        weight = 1
+    
+    [[menu.main]]
+        name = "文章"
+        url = "/posts/"
+        weight = 2
+    
+    [[menu.main]]
+        name = "归档"
+        url = "/archives/"
+        weight = 3
+
+# 输出格式
+[outputs]
+    home = ["HTML", "RSS"]
+    page = ["HTML"]
